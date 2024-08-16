@@ -27,15 +27,20 @@
 @if(count($posts)>0)
 @foreach ( $posts as $post )
     
-<div class="row">
+<div class="row mt-3">
     <div class="col-12 col-md-12 col-lg-12">
         <div class="card">
             <div class="card-header">title</div>
             <div class="card-body">
                 <p>{{$p}}</p>
-                <img src="{{asset('uploads'.'/'.$post->image)}}" width="100%" height="100%">
+                <img src="{{asset('uploads'.'/'.$post->image)}}" style="width: 100%; height: 700px;">
 
             </div>
+        </div>
+        <div>
+            <button type="#" class="btn btn-sm btn-primary"> Like  </button>
+            <button type="#" class="btn btn-sm btn-secondary"> Comment  </button>
+            <button type="#" class="btn btn-sm btn-info"> View  </button>
         </div>
     </div>
 </div>
