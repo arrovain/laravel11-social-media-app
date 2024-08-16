@@ -35,6 +35,13 @@ class ImagePost extends Controller
     $status=$photo->save();
 
     if($status){
+        return redirect('/home')->with('success', 'Post Created Successfully');
+    }
+        else{
+            return redirect('/home')->with('error', 'something went wrong');
+
+        }
 
 }
 }
+
