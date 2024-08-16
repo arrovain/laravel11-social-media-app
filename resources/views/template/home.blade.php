@@ -2,7 +2,25 @@
 @section('body')
 <div class="card">
     <div class="card-body">
-        <form method="post" action="#" enctype="multipart/form-data"></form> 
+        <form method="post" action="#" enctype="multipart/form-data">
+            <div class="mb-3">
+        <label> Title </label>
+        <input type="text" name="title" class="form-control">
+    </div>
+
+        <form method="post" action="#" enctype="multipart/form-data">
+            <div class="mb-3">
+        <label> Description </label>
+        <textarea type="text" name="description" class="form-control" rows="4"> </textarea>
+    </div>
+    <div class="mb-3">
+        <label> Photo </label>
+        <textarea type="file" name="image" class="form-control" > </textarea>
+    </div>
+
+    <button type="submit" class="btn btn-sm btn-primary">Post </button>
+        
+        </form> 
     </div>
 </div>
 @if(count($posts)>0)
