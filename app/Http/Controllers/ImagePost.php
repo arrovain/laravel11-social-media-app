@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class ImagePost extends Controller
 {
@@ -15,5 +16,7 @@ class ImagePost extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
             'descriptions' => 'required',
         ]);
+
+        $photo = new Post();
     }
 }
