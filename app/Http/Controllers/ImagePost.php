@@ -8,11 +8,15 @@ use App\Models\Post;
 class ImagePost extends Controller
 {
     public function index(){
-        return view('template.home');
+        return view('template.home', [
+            'posts' => $posts
+        ] );
     }
 
     public function store(Request $request){
-        $validateData = $request->validate([
+        
+        
+        $validatedData = $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif',
             'descriptions' => 'required',
         ]);
@@ -22,9 +26,15 @@ class ImagePost extends Controller
         $extension=$file->getClientOriginalExtension();
         $filename=time().'.'.$extension;
         $file->move('uploads/,$filename');
-
-
     }
     
-    $photo = new Post();
+    $photo->title=$request->title;
+    $photo->image=$filename;
+    $photo->description=$request->description;
+    $photo->user_id=1;
+    $status=$photo->save();
+
+    if($status){
+
+}
 }
