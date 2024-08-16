@@ -10,4 +10,4 @@ Route::get('/', function () {
 
 Route::get('/home', [ImagePost::class, 'index'])->name('home');
 Route::post('/post', [ImagePost::class, 'store'])->name('store');
-Route::post('/like-count', [ImagePost::class, 'like-count'])->name('like-count');
+Route::post('/like-count/{id}', [ImagePost::class, 'like-count'])->name('like-count');

@@ -38,6 +38,9 @@
             </div>
         </div>
         <div class="mt-1">
+            @php
+                $likes= DB::table('likes')->where('post_id',$post->post_id)->get(); 
+            @endphp
             <form action="{{url('like-count')}}" method="post" class="d-inline">
                 @csrf
                 <button type="submit" class="btn btn-sm btn-primary"> Like </button>
