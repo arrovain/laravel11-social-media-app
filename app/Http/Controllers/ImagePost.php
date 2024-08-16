@@ -43,5 +43,11 @@ class ImagePost extends Controller
         }
 
 }
+
+           public function likecount(Request $request, $id){
+
+
+            
+           }
 }
 
