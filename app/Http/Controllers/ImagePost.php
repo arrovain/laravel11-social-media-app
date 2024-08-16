@@ -17,6 +17,14 @@ class ImagePost extends Controller
             'descriptions' => 'required',
         ]);
 
-        $photo = new Post();
+        if($request->hasFile('image')){
+        $file=$request->file('image');
+        $extension=$file->getClientOriginalExtension();
+        $filename=time().'.'.$extension;
+        $file->move('uploads/,$filename');
+
+
     }
+    
+    $photo = new Post();
 }
