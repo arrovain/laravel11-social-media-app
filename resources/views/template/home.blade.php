@@ -1,5 +1,6 @@
 @extends('master')
 @section('body')
+@if(count($posts)>0)
 @foreach ( $posts as $post )
     
 <div class="row">
@@ -15,5 +16,8 @@
     </div>
 </div>
 @endforeach
+@else
+no post find
+@endif
 
 @endsection
