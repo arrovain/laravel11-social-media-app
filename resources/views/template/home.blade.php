@@ -2,7 +2,8 @@
 @section('body')
 <div class="card">
     <div class="card-body">
-        <form method="post" action="#" enctype="multipart/form-data">
+        <form method="post" action="{{url('post')}}" enctype="multipart/form-data">
+            @csrf
             <div class="mb-3">
         <label> Title </label>
         <input type="text" name="title" class="form-control">

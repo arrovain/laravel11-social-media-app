@@ -9,3 +9,4 @@ Route::get('/', function () {
 
 
 Route::get('/home', [ImagePost::class, 'index'])->name('home');
+Route::post('/post', [ImagePost::class, 'store'])->name('store');
