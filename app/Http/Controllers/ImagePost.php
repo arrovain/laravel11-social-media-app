@@ -46,6 +46,20 @@ class ImagePost extends Controller
 
            public function likecount(Request $request, $id){
 
+            $like=new Likes();
+            $like->user_id=1;
+            $like->post_id=$id;
+            $status->$like->save();
+
+            if($status){
+                return redirect('/home')->with('success', 'Post Created Successfully');
+            }
+                else{
+                    return redirect('/home')->with('error', 'something went wrong');
+        
+                }
+
+
 
             
            }
