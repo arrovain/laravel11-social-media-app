@@ -1,5 +1,10 @@
 @extends('master')
 @section('body')
+<div class="card">
+    <div class="card-body">
+        <form method="post" action="#" enctype="multipart/form-data"></form> 
+    </div>
+</div>
 @if(count($posts)>0)
 @foreach ( $posts as $post )
     
