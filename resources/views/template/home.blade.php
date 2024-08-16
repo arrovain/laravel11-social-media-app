@@ -8,6 +8,7 @@
             <div class="card-header">title</div>
             <div class="card-body">
                 <p>{{$p}}</p>
+                <img src="{{asset('uploads'.'/'.$post->image)}}" width="100%" height="100%">
 
             </div>
         </div>
