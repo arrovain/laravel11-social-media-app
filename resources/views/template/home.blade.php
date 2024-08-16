@@ -43,10 +43,11 @@
             @endphp
             <form action="{{url('like-count')}}" method="post" class="d-inline">
                 @csrf
-                <button type="submit" class="btn btn-sm btn-primary"> Like </button>
-                <button type="#" class="btn btn-sm btn-secondary"> Comment  </button>
-                <button type="#" class="btn btn-sm btn-info"> View  </button>
+                <button type="submit" class="btn btn-sm btn-primary"> {{count($likes)}} </button>
+                
             </form>
+            <button type="#" class="btn btn-sm btn-secondary"> Comment  </button>
+                <button type="#" class="btn btn-sm btn-info"> View  </button>
       
         </div>
     </div>
