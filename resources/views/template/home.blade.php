@@ -37,10 +37,14 @@
 
             </div>
         </div>
-        <div>
-            <button type="#" class="btn btn-sm btn-primary"> Like  </button>
-            <button type="#" class="btn btn-sm btn-secondary"> Comment  </button>
-            <button type="#" class="btn btn-sm btn-info"> View  </button>
+        <div class="mt-1">
+            <form action="{{url('like-count')}}" method="post" class="d-inline">
+                @csrf
+                <button type="submit" class="btn btn-sm btn-primary"> Like </button>
+                <button type="#" class="btn btn-sm btn-secondary"> Comment  </button>
+                <button type="#" class="btn btn-sm btn-info"> View  </button>
+            </form>
+      
         </div>
     </div>
 </div>
