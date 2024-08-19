@@ -78,11 +78,20 @@
             </div>
 
 
-            @php
-            $comments=DB::table('$comments');
-            @endphp
+          
+
+
             <button type="#" class="btn btn-sm btn-secondary"> Comment  </button>
                 <button type="#" class="btn btn-sm btn-info"> View  </button>
+
+                @php
+                $comments=DB::table('$comments')->where('post_id',$post->id)->get();
+                @endphp
+
+                @foreach($comments as $comment)
+                <p style="padding-left: 10px; color: red; font-size: 16px;"> {{$comment->comments}}</p>
+
+                @endforeach
       
         </div>
     </div>
