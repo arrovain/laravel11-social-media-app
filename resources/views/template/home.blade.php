@@ -61,9 +61,12 @@
                             <form action="{{url('comments/'.$post->id)}}" method="post">
                                 @csrf
                                 <div class="mt-3">
-                                    <textarea name="content" class="form-control" placeholder="enter comment here..." rows="4"> </textarea>
+                                    <textarea name="comments" class="form-control" placeholder="enter comment here..." rows="4"> </textarea>
                                 </div>
-                                <button type="submit" class="btn btn-sm btn-success">Post comment</button>
+                                <div class="mt-3">
+                                    <button type="submit" class="btn btn-sm btn-success">Post comment</button>
+
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -73,6 +76,11 @@
 
 
             </div>
+
+
+            @php
+            $comments=DB::table('$comments');
+            @endphp
             <button type="#" class="btn btn-sm btn-secondary"> Comment  </button>
                 <button type="#" class="btn btn-sm btn-info"> View  </button>
       
