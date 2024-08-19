@@ -10,6 +10,7 @@ use App\Models\Post;
 class ImagePost extends Controller
 {
     public function index(){
+        $posts = DB::table('posts')->select("*")->orderBy('created_at', 'desc')->get();
         return view('template.home', [
             'posts' => $posts
         ] );
