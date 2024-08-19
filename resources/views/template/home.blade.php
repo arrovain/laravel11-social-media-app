@@ -43,9 +43,12 @@
             @endphp
             <form action="{{url('like-count')}}" method="post" class="d-inline">
                 @csrf
-                <button type="submit" class="btn btn-sm btn-primary"> {{count($likes)}} </button>
-                
+                <button type="submit" class="btn btn-sm btn-primary" data-bs-dismiss='modal' aria-label='close'> {{count($likes)}} </button>
+             
+
+                 
             </form>
+            <button type="submit" class="btn btn-sm btn-secondary" data-bs-toggle="modal"> </button>
             <button type="#" class="btn btn-sm btn-secondary"> Comment  </button>
                 <button type="#" class="btn btn-sm btn-info"> View  </button>
       
