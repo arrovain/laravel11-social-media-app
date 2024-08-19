@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comments;
+use App\Models\Likes;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
@@ -52,7 +54,26 @@ class ImagePost extends Controller
             $status->$like->save();
 
             if($status){
-                return redirect('/home')->with('success', 'Post Created Successfully');
+                return redirect('/home')->with('success', 'Liked');
+            }
+                else{
+                    return redirect('/home')->with('error', 'something went wrong');
+        
+                }
+
+
+
+            
+           }
+           public function comment(Request $request, $id){
+
+            $comment=new Comments();
+            $comment->user_id=1;
+            $comment->comment=$request->comment;
+            $status->$comment->save();
+
+            if($status){
+                return redirect('/home')->with('success', 'Commment Created Successfully');
             }
                 else{
                     return redirect('/home')->with('error', 'something went wrong');
