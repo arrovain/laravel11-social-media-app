@@ -55,6 +55,15 @@
                     <div class="modal-content">
                         <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModallable"> Comment on {{$post->title}} title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{url('comments/'.$post->id)}}" method="post">
+                                @csrf
+                                <div class="mt-3">
+                                    <textarea name="content" class="form-control" placeholder="enter comment here..." rows="4"> </textarea>
+                            </form>
+                        </div>
 
 
             </div>
