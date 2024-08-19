@@ -48,11 +48,15 @@
 
                  
             </form>
-            <button type="submit" class="btn btn-sm btn-secondary" data-bs-toggle="modal"> </button>
+            <button type="submit" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#comment{{$post->id}}"> </button>
 
             <div class="modal fade" id="comment{{$post->id}}" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModallable"> Comment on {{$post->title}} title</h1>
 
-                
+
             </div>
             <button type="#" class="btn btn-sm btn-secondary"> Comment  </button>
                 <button type="#" class="btn btn-sm btn-info"> View  </button>
