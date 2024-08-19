@@ -61,15 +61,12 @@ class ImagePost extends Controller
         
                 }
 
-
-
-            
            }
            public function comment(Request $request, $id){
 
             $comment=new Comments();
             $comment->user_id=1;
-            $comment->comment=$request->comment;
+            $comment->comments=$request->comments;
             $status->$comment->save();
 
             if($status){

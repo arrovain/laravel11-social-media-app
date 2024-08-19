@@ -62,7 +62,13 @@
                                 @csrf
                                 <div class="mt-3">
                                     <textarea name="content" class="form-control" placeholder="enter comment here..." rows="4"> </textarea>
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-success">Post comment</button>
                             </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
 
 
