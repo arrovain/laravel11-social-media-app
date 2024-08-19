@@ -49,6 +49,11 @@
                  
             </form>
             <button type="submit" class="btn btn-sm btn-secondary" data-bs-toggle="modal"> </button>
+
+            <div class="modal fade" id="comment{{$post->id}}" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
+
+                
+            </div>
             <button type="#" class="btn btn-sm btn-secondary"> Comment  </button>
                 <button type="#" class="btn btn-sm btn-info"> View  </button>
       
